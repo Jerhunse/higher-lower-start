@@ -30,7 +30,7 @@ while play_again == True:
   print("Compare "+current_a["name"]+ " a "+ current_a["description"] +", from "+current_a["country"])
   print(vs)
   print("Against "+current_b["name"]+ " a "+ current_b["description"]+ ", from "+current_b["country"])
-  user_guess = input("Who has more followers? 'A' of 'B': ")
+  user_guess = input("Who has more followers? 'A' of 'B': ").lower()
 
   if user_guess == "a":
     c1 = current_a["follower_count"]
@@ -43,6 +43,10 @@ while play_again == True:
       replit.clear()
       play_again = False
       print(f"Thats Wrong, Game Over. Your final score is:{current_points}")
+    else:
+      print("invalid input")
+      replit.clear()
+    
 
   elif user_guess == "b":
     c1 = current_a["follower_count"]
@@ -55,6 +59,10 @@ while play_again == True:
       replit.clear()
       play_again = False
       print(f"Thats Wrong, Game Over. Your final score is: {current_points}")
+    else:
+      print("invalid input")
+      replit.clear()
+  
 
 
 
